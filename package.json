@@ -1,0 +1,23 @@
+{
+  "name": "vidly",
+  "version": "1.0.0",
+  "description": "Movies Database API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khashayar-h/vidly.git"
+  },
+  "author": "Khashayar Haghighi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/khashayar-h/vidly/issues"
+  },
+  "homepage": "https://github.com/khashayar-h/vidly#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "joi": "^13.1.0"
+  }
+}
