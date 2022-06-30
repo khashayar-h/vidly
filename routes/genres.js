@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
-const {validate, genre} = require('../models/genres');
+const {validate, Genre} = require('../models/genres');
 
 router.get('/', async (req,res)=>{
     const genres = await Genre.find();

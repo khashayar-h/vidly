@@ -32,4 +32,4 @@ function validateCustomer(customer){
 
 // module.exports is the same as exports but we should call a method on exports when we use it without module
 exports.validate = validateCustomer;
-exports.customer = Customer;
+exports.Customer = Customer;

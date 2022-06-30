@@ -1,6 +1,6 @@
 const express = require('express');
 const mongoose = require('mongoose');
-const {validate, customer} = require('../models/customers');
+const {validate, Customer} = require('../models/customers');
 const router = express.Router();
 
 router.get('/', async (req, res)=>{
