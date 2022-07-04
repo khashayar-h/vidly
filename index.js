@@ -5,6 +5,8 @@ const moviesRouter = require('./routes/movies');
 const customersRouter = require('./routes/customers');
 const rentalsRouter = require('./routes/rentals');
 const mongoose = require('mongoose');
+const Joi = require('joi');
+Joi.objectid = require('joi-objectid')(Joi);
 
 mongoose.connect('mongodb://localhost/vidly')
 .then(()=>{console.log('Conection was Succesful...')})
