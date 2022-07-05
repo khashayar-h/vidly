@@ -7,8 +7,14 @@ const rentalsRouter = require('./routes/rentals');
 const usersRouter = require('./routes/users');
 const authRouter = require('./routes/auth');
 const mongoose = require('mongoose');
+const config = require('config');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
+
+if (!config.get('jwtPrivateKey')) {
+    console.error('FATAL Error - jwtKey is not set');
+    process.exit(1);
+}
 
 mongoose.connect('mongodb://localhost/vidly')
 .then(()=>{console.log('Conection was Succesful...')})
