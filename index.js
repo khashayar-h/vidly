@@ -5,6 +5,7 @@ const moviesRouter = require('./routes/movies');
 const customersRouter = require('./routes/customers');
 const rentalsRouter = require('./routes/rentals');
 const usersRouter = require('./routes/users');
+const authRouter = require('./routes/auth');
 const mongoose = require('mongoose');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
@@ -19,6 +20,7 @@ app.use('/api/customers',customersRouter);
 app.use('/api/movies', moviesRouter);
 app.use('/api/rentals', rentalsRouter);
 app.use('/api/users', usersRouter);
+app.use('/api/auth', authRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
