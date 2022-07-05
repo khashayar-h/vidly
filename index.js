@@ -4,6 +4,7 @@ const genresRouter = require('./routes/genres');
 const moviesRouter = require('./routes/movies');
 const customersRouter = require('./routes/customers');
 const rentalsRouter = require('./routes/rentals');
+const usersRouter = require('./routes/users');
 const mongoose = require('mongoose');
 const Joi = require('joi');
 Joi.objectId = require('joi-objectid')(Joi);
@@ -17,6 +18,7 @@ app.use('/api/genres', genresRouter);
 app.use('/api/customers',customersRouter);
 app.use('/api/movies', moviesRouter);
 app.use('/api/rentals', rentalsRouter);
+app.use('/api/users', usersRouter);
 
 const port = process.env.PORT || 3000;
 app.listen(port, ()=>{
